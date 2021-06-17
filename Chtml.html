@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #map{
+            width: 100vw;
+            height: 100vh;
+            border: 5px solid darkslategrey;
+            box-sizing: border-box;
+        }
+    </style>
+
+    <title>Plotting COVID-19 Cases Worldwide</title>
+</head>
+<body>
+    <div id='map'></div>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidW5rbm93bjEyMyIsImEiOiJja3BzcDhqMDEwYnF1MnZubzk1OWFsb2UzIn0.3fPJpoE1IQkXSfzqxukmww';
+        var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/light-v10',
+        zoom: 1,
+        center :[-7,40]
+        });
+        map.setMaxZoom(11);
+
+        // map.boxZoom.disable(); //The BoxZoomHandler allows the user to zoom the map to fit within a bounding box. The bounding box is defined by clicking and holding shift while dragging the cursor.
+        // map.scrollZoom.disable(); //The ScrollZoomHandler allows the user to zoom the map by scrolling.
+        // map.dragPan.disable(); //The DragPanHandler allows the user to pan the map by clicking and dragging the cursor. panning = dragging
+        map.dragRotate.disable(); //The DragRotateHandler allows the user to rotate the map by clicking and dragging the cursor while holding the right mouse button or ctrl key.
+
+    </script>
+
+    <script src="Cdata.js"></script>
+</body>
+</html>
