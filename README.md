@@ -1,2 +1,2 @@
 # covid-19-project
-This project is to indicate the number of deaths in a particular country on world map
+This project indicates the number of deaths in a particular country on world map on the basis of data in json file.
